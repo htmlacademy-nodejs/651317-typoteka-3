@@ -1,7 +1,7 @@
 # Личный проект «Типотека» [![Build status][travis-image]][travis-url]
 
 * Студент: [Edem Reshidov](https://up.htmlacademy.ru/nodejs/3/user/651317).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Пушников](https://htmlacademy.ru/profile/id476723).
 
 ---
 
