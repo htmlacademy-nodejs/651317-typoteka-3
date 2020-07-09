@@ -8,10 +8,7 @@ const ExitCode = {
   ERROR: 1
 };
 
-const MonthRange = {
-  MIN: -3,
-  MAX: 3
-};
+const MONTH_RANGE = 3;
 
 const AnnounceLength = {
   MIN: 1,
@@ -27,7 +24,7 @@ module.exports = {
   USER_ARGV_INDEX,
   DEFAULT_COMMAND,
   ExitCode,
-  MonthRange,
   AnnounceLength,
-  FullTextLength
+  FullTextLength,
+  MONTH_RANGE
 };

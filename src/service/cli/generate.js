@@ -2,7 +2,7 @@
 
 const fs = require(`fs`);
 const {getRandomInt, generateRandomDate, generateSentences, shuffle} = require(`../utils`);
-const {AnnounceLength, FullTextLength} = require(`../../constants`);
+const {AnnounceLength, FullTextLength, ExitCode} = require(`../../constants`);
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
 
@@ -68,7 +68,8 @@ module.exports = {
     const content = JSON.stringify(generatePublications(countPublications));
     fs.writeFile(`${FILE_NAME}`, content, (err) => {
       if (err) {
-        return console.error(`Can't write data to file`);
+        console.error(`Can't write data to file`);
+        return process.exit(ExitCode.ERROR);
       } else {
         return console.info(`Operation success. File created.`);
       }

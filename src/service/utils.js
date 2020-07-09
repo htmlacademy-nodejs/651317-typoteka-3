@@ -1,6 +1,6 @@
 'use strict';
 
-const {MonthRange} = require(`../constants`);
+const {MONTH_RANGE} = require(`../constants`);
 
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
@@ -9,19 +9,21 @@ const getRandomInt = (min, max) => {
 };
 
 const generateRandomDate = () => {
-  const date = new Date();
-  const newMonth = date.getMonth() + getRandomInt(MonthRange.MIN, MonthRange.MAX);
-  date.setMonth(newMonth);
-  return date;
+  const firstDate = new Date();
+  const secondDate = new Date();
+  secondDate.setMonth(secondDate.getMonth() - MONTH_RANGE);
+  const randomDate = getRandomInt(+firstDate, +secondDate);
+  return new Date(randomDate);
+
 };
 
 const generateSentences = (sentences, min, max) => {
   const count = getRandomInt(min, max);
-  let result = ``;
+  let result = [];
   for (let i = 0; i < count; i++) {
-    result += sentences[getRandomInt(0, sentences.length)];
+    result.push(sentences[getRandomInt(0, sentences.length)]);
   }
-  return result;
+  return result.join(``);
 };
 
 const shuffle = (someArray) => {
