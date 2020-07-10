@@ -1,7 +1,8 @@
 'use strict';
 
 const {MONTH_RANGE} = require(`../constants`);
-
+const chalk = require(`chalk`);
+const fs = require(`fs`).promises;
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -35,9 +36,21 @@ const shuffle = (someArray) => {
   return someArray;
 };
 
+const readContent = async (filePath) => {
+  try {
+    const content = await fs.readFile(filePath, `utf-8`);
+    return content.split(`\n`);
+  } catch (err) {
+    console.error(chalk.red(`Can't read data from the file, err: ${err}`));
+    return [];
+  }
+};
+
+
 module.exports = {
   getRandomInt,
   generateRandomDate,
   generateSentences,
-  shuffle
+  shuffle,
+  readContent
 };
