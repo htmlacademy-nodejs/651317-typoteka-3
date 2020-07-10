@@ -68,8 +68,8 @@ module.exports = {
     const countPublications = (!isNaN(Number.parseInt(count, 10)) && count > 0 && count <= 1000) ? Number.parseInt(count, 10) : DEFAULT_COUNT;
     const content = JSON.stringify(generatePublications(countPublications));
     try {
-      fs.writeFile(FILE_NAME, content);
-      console.info(chalk.green(`Operation success. File created.`));
+      await fs.writeFile(FILE_NAME, content);
+      return console.info(chalk.green(`Operation success. File created.`));
     } catch (err) {
       console.error(chalk.red(`Can't write data to file: ${err}`));
       return process.exit(ExitCode.ERROR);
