@@ -41,8 +41,7 @@ const readContent = async (filePath) => {
     const content = await fs.readFile(filePath, `utf-8`);
     return content.split(`\n`);
   } catch (err) {
-    console.error(chalk.red(`Can't read data from the file, err: ${err}`));
-    return [];
+    throw new Error(chalk.red(`Can't read data from the file, err: ${err}`));
   }
 };
 

@@ -7,9 +7,9 @@ const {AnnounceLength, FullTextLength, ExitCode, FILE_NAME} = require(`../../con
 const DEFAULT_COUNT = 1;
 
 
-const FILE_TITLES_PATH = `../data/titles.txt`;
-const FILE_CATEGORIES_PATH = `../data/categories.txt`;
-const FILE_SENTENCES_PATH = `../data/sentences.txt`;
+const FILE_TITLES_PATH = `./data/titles.txt`;
+const FILE_CATEGORIES_PATH = `./data/categories.txt`;
+const FILE_SENTENCES_PATH = `./data/sentences.txt`;
 
 const generatePublications = (count, titles, categories, sentences) => {
   return Array(count).fill({}).map(() => ({
