@@ -4,13 +4,12 @@ const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
 const {getRandomInt, generateRandomDate, generateSentences, shuffle, readContent} = require(`../utils`);
 const {AnnounceLength, FullTextLength, ExitCode} = require(`../../constants`);
-const { read } = require("fs");
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
 
-const FILE_TITLES_PATH = `../data/titles.txt`;
-const FILE_CATEGORIES_PATH = `../data/categories.txt`;
-const FILE_SENTENCES_PATH = `../data/sentences.txt`;
+const FILE_TITLES_PATH = `./data/titles.txt`;
+const FILE_CATEGORIES_PATH = `./data/categories.txt`;
+const FILE_SENTENCES_PATH = `./data/sentences.txt`;
 
 const generatePublications = (count, titles, categories, sentences) => {
   return Array(count).fill({}).map(() => ({
