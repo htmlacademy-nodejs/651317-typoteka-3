@@ -52,8 +52,7 @@ module.exports = {
 
     http.createServer(onClientConnect).listen(port).on(`listening`, (err) => {
       if (err) {
-        console.error(chalk.red(`Error while creating server, err: ${err}`));
-        return process.exit(ExitCode.ERROR);
+        throw new Error(`Error while creating server, err: ${err}`);
       }
       return console.info(chalk.green(`Waiting for connection on port: ${port}`));
     });
