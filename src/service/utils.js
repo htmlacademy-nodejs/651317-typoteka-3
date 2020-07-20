@@ -39,10 +39,9 @@ const shuffle = (someArray) => {
 const readContent = async (filePath) => {
   try {
     const content = await fs.readFile(filePath, `utf-8`);
-    return content.split(`\n`);
+    return content.trim(``).split(`\n`);
   } catch (err) {
-    console.error(chalk.red(`Can't read data from the file, err: ${err}`));
-    return [];
+    throw new Error(chalk.red(`Can't read data from the file, err: ${err}`));
   }
 };
 

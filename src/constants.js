@@ -2,6 +2,8 @@
 
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
+const DEFAULT_PORT = 3000;
+const FILE_NAME = `mocks.json`;
 
 const ExitCode = {
   SUCCESS: 0,
@@ -20,11 +22,22 @@ const FullTextLength = {
   MAX: 10
 };
 
+const HttpCode = {
+  OK: 200,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500,
+  FORBIDDEN: 403,
+  UNAUTHORIZED: 401,
+};
+
 module.exports = {
   USER_ARGV_INDEX,
   DEFAULT_COMMAND,
   ExitCode,
   AnnounceLength,
   FullTextLength,
-  MONTH_RANGE
+  MONTH_RANGE,
+  DEFAULT_PORT,
+  HttpCode,
+  FILE_NAME
 };
