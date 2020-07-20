@@ -5,7 +5,6 @@ const chalk = require(`chalk`);
 const {getRandomInt, generateRandomDate, generateSentences, shuffle, readContent} = require(`../utils`);
 const {AnnounceLength, FullTextLength, ExitCode, FILE_NAME} = require(`../../constants`);
 
-
 const DEFAULT_COUNT = 1;
 const FILE_TITLES_PATH = `./data/titles.txt`;
 const FILE_CATEGORIES_PATH = `./data/categories.txt`;
