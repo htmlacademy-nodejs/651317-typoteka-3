@@ -3,6 +3,7 @@
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
 const DEFAULT_PORT = 3000;
+const EXPRESS_DEFAULT_PORT = 8080;
 const FILE_NAME = `mocks.json`;
 
 const ExitCode = {
@@ -38,6 +39,7 @@ module.exports = {
   FullTextLength,
   MONTH_RANGE,
   DEFAULT_PORT,
+  EXPRESS_DEFAULT_PORT,
   HttpCode,
   FILE_NAME
 };

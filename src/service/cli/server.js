@@ -3,7 +3,7 @@
 const http = require(`http`);
 const chalk = require(`chalk`);
 const fs = require(`fs`).promises;
-const {DEFAULT_PORT, FILE_NAME, ExitCode, HttpCode} = require(`../../constants`);
+const {DEFAULT_PORT, FILE_NAME, HttpCode} = require(`../../constants`);
 
 const sendResponse = (res, statusCode, message) => {
   const template = `
