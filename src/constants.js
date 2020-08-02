@@ -5,6 +5,7 @@ const DEFAULT_COMMAND = `--help`;
 const DEFAULT_PORT = 3000;
 const EXPRESS_DEFAULT_PORT = 8080;
 const FILE_NAME = `mocks.json`;
+const PUBLIC_DIR = `public`;
 
 const ExitCode = {
   SUCCESS: 0,
@@ -41,5 +42,6 @@ module.exports = {
   DEFAULT_PORT,
   EXPRESS_DEFAULT_PORT,
   HttpCode,
-  FILE_NAME
+  FILE_NAME,
+  PUBLIC_DIR
 };
